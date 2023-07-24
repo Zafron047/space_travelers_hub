@@ -1,12 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  nohain: []
+  nohain: [],
 };
 
 const newSlicer = createSlice({
-  name: "nahid",
+  name: 'nahid',
   initialState,
-})
+});
 
 export default newSlicer.reducer;
