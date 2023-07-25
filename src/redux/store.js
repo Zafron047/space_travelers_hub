@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import uttara from './slicer/newSlice';
+import missionsReducer from './missions/missionsSlice';
 
-const newConfig = configureStore({
-  reducer: uttara,
+const store = configureStore({
+  reducer: {
+    missions: missionsReducer,
+  },
 });
 
-export default newConfig;
+export default store;
