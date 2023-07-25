@@ -1,0 +1,48 @@
+.missions-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.missions-table th,
+.missions-table td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.missions-table-header {
+  text-align: left;
+}
+
+.mission-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: 15%;
+}
+
+.member {
+  background-color: #6c757e;
+  display: block;
+  font-size: 0.8rem;
+  width: 8rem;
+  border-radius: 0.3rem;
+  padding-bottom: 0.1rem;
+}
+
+.not-member {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.join-td {
+  text-align: center;
+}
+
+.join {
+  width: 8rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: 1px solid #4b5156;
+  padding: 0.5rem;
+}
