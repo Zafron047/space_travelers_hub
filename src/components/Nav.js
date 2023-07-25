@@ -13,7 +13,7 @@ const Nav = () => (
       <ul className="nav-ul">
         <li className="nav-li">
           <NavLink
-            to="/rockets"
+            to="/"
           >
             Rockets
           </NavLink>
