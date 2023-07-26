@@ -1,9 +1,11 @@
+import './styles/Rocket.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchRockets } from '../redux/rockets/rocketSlice';
+import RocketList from './RocketList';
 
 const Rockets = () => {
-  const rocketArr = useSelector((state) => state.rockets);
+  const rocketArr = useSelector((state) => state.rockets.rocketArr);
   const isLoading = useSelector((state) => state.rockets.isLoading);
   console.log('This is Rockets', rocketArr);
   const dispatch = useDispatch();
@@ -18,17 +20,16 @@ const Rockets = () => {
       {isLoading ? (
         <p>Loading...</p>
       ) : (
-        <ul>
-          {rocketArr.rocketArr.map((rocket) => (
-            <li key={rocket.id}>
-              {rocket.flickr_images.length > 0 && (
-              <img src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
-              )}
-              <h3>{rocket.rocket_name}</h3>
-              <p>
-                {rocket.description}
-              </p>
-            </li>
+        <ul className="list-container">
+          {rocketArr.map((rocket) => (
+            <RocketList
+              key={rocket.id}
+              rocket={{
+                flickr_images: rocket.flickr_images,
+                rocket_name: rocket.rocket_name,
+                description: rocket.description,
+              }}
+            />
           ))}
         </ul>
       )}

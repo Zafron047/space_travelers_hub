@@ -1,0 +1,15 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  height: 1500px;
+  /* width: 150px; */
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+}
+
+.list-img {
+  height: 100px;
+}
