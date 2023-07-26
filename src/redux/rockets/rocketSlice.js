@@ -16,6 +16,7 @@ const rocketReducer = createSlice({
     rocketArr: [],
     isLoading: false,
     error: null,
+    isDataFetched: false,
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -31,6 +32,7 @@ const rocketReducer = createSlice({
           description: rocketItems.description,
           flickr_images: rocketItems.flickr_images,
         }));
+        state.isDataFetched = true;
       })
       .addCase(fetchRockets.rejected, (state, action) => {
         state.isLoading = false;
