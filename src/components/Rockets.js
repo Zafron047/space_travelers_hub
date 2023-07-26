@@ -1,4 +1,4 @@
-import './styles/Rocket.css';
+import './styles/RocketList.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { fetchRockets } from '../redux/rockets/rocketSlice';
