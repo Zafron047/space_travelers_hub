@@ -2,9 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 1.2rem;
   border-bottom: 1px solid #ddd;
-  margin-bottom: 1rem;
+  color: aliceblue;
 }
 
 .navbar-header {
@@ -14,7 +13,7 @@
 }
 
 .nav-heading {
-  margin-left: 3rem;
+  margin-left: 1.5rem;
 }
 
 .nav-ul {

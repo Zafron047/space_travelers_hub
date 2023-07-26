@@ -11,26 +11,28 @@ export const fetchRockets = createAsyncThunk(
 );
 
 const rocketReducer = createSlice({
-  name: 'Pocket-Me-Rocket-He',
+  name: 'RocketSlice',
   initialState: {
     rocketArr: [],
     isLoading: false,
     error: null,
+    isDataFetched: false,
   },
   reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchRockets.pending, (state) => {
-        state.isLoading = false;
+        state.isLoading = true;
       })
       .addCase(fetchRockets.fulfilled, (state, action) => {
         state.isLoading = false;
         state.rocketArr = action.payload.map((rocketItems) => ({
           id: rocketItems.id,
           rocket_name: rocketItems.rocket_name,
-          rocket_type: rocketItems.rocket_type,
+          description: rocketItems.description,
           flickr_images: rocketItems.flickr_images,
         }));
+        state.isDataFetched = true;
       })
       .addCase(fetchRockets.rejected, (state, action) => {
         state.isLoading = false;

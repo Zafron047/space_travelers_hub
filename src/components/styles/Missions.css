@@ -2,6 +2,7 @@
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
+  color: aliceblue;
 }
 
 .missions-table th,
