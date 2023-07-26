@@ -1,15 +1,36 @@
-.list-container {
+.Rocket-List {
+  margin: 15px 0;
+  color: aliceblue;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.ul-container {
+  border: 5px solid yellow;
   display: flex;
   flex-direction: column;
-  height: 1500px;
+  /* align-items:; */
+}
+
+.list-container {
+  border: 5px solid greenyellow;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  /* height: 1500px; */
   /* width: 150px; */
+  margin-bottom: 60px;
+  padding: 0%;
+  gap: 2%;
 }
 
 .list {
+  border: 5px solid pink;
   display: flex;
+  justify-content: space-around;
   gap: 20px;
 }
 
 .list-img {
-  height: 100px;
+  width: 200px;
 }

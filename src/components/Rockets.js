@@ -15,8 +15,8 @@ const Rockets = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <h2>Rockets List</h2>
+    <div className="ul-container">
+      <h2 className="Rocket-List">Rockets List</h2>
       {isLoading ? (
         <p>Loading...</p>
       ) : (

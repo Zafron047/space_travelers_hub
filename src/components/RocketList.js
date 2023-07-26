@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 
 const RocketList = ({ rocket }) => (
   <li className="list" key={rocket.id}>
-    <div className="list-img">
-      {rocket.flickr_images.length > 0 && (
-        <img src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
-      )}
-    </div>
+    {rocket.flickr_images.length > 0 && (
+      <img className="list-img" src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
+    )}
     <div>
       <h3>{rocket.rocket_name}</h3>
       <p>
