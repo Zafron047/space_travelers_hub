@@ -11,7 +11,7 @@ export const fetchRockets = createAsyncThunk(
 );
 
 const rocketReducer = createSlice({
-  name: 'Pocket-Me-Rocket-He',
+  name: 'RocketSlice',
   initialState: {
     rocketArr: [],
     isLoading: false,
@@ -21,14 +21,14 @@ const rocketReducer = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchRockets.pending, (state) => {
-        state.isLoading = false;
+        state.isLoading = true;
       })
       .addCase(fetchRockets.fulfilled, (state, action) => {
         state.isLoading = false;
         state.rocketArr = action.payload.map((rocketItems) => ({
           id: rocketItems.id,
           rocket_name: rocketItems.rocket_name,
-          rocket_type: rocketItems.rocket_type,
+          description: rocketItems.description,
           flickr_images: rocketItems.flickr_images,
         }));
       })
