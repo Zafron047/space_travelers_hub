@@ -6,6 +6,7 @@ export const fetchMissions = createAsyncThunk('missions/fetchMissions', async ()
   const response = await axios.get(apiUrl);
   return response.data;
 });
+/* eslint-disable max-len */
 const missionsSlice = createSlice({
   name: 'missions',
   initialState: {
@@ -14,7 +15,16 @@ const missionsSlice = createSlice({
     error: null,
     isMissionsFetched: false,
   },
-  reducers: {},
+  reducers: {
+    joinMission: (state, action) => {
+      const missionId = action.payload;
+      state.missions = state.missions.map((mission) => (mission.mission_id === missionId ? { ...mission, reserved: true } : mission));
+    },
+    leaveMission: (state, action) => {
+      const missionId = action.payload;
+      state.missions = state.missions.map((mission) => (mission.mission_id === missionId ? { ...mission, reserved: false } : mission));
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchMissions.pending, (state) => {
       state.isLoading = true;
@@ -35,4 +45,5 @@ const missionsSlice = createSlice({
   },
 });
 
+export const { joinMission, leaveMission } = missionsSlice.actions;
 export default missionsSlice.reducer;

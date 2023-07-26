@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMissions } from '../redux/missions/missionsSlice';
+import { fetchMissions, joinMission, leaveMission } from '../redux/missions/missionsSlice';
 import Mission from './Mission';
 import './styles/Missions.css';
 
@@ -15,6 +15,13 @@ const Missions = () => {
       dispatch(fetchMissions());
     }
   }, [dispatch, isMissionsFetched]);
+
+  const handleJoinMission = (missionId) => {
+    dispatch(joinMission(missionId));
+  };
+  const handleLeaveMission = (missionId) => {
+    dispatch(leaveMission(missionId));
+  };
 
   return (
 
@@ -32,7 +39,12 @@ const Missions = () => {
           </thead>
           <tbody>
             {missions.map((mission) => (
-              <Mission key={mission.mission_id} mission={mission} />
+              <Mission
+                key={mission.mission_id}
+                mission={mission}
+                handleJoinMission={handleJoinMission}
+                handleLeaveMission={handleLeaveMission}
+              />
             ))}
           </tbody>
         </table>
