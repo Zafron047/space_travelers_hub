@@ -1,18 +1,22 @@
 import './styles/Rocket.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchRockets } from '../redux/rockets/rocketSlice';
 import RocketList from './RocketList';
 
 const Rockets = () => {
   const rocketArr = useSelector((state) => state.rockets.rocketArr);
   const isLoading = useSelector((state) => state.rockets.isLoading);
+  const [Mounted, setMounted] = useState(false);
   console.log('This is Rockets', rocketArr);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (Mounted === false) {
+      dispatch(fetchRockets());
+      setMounted(true);
+    }
+  }, [dispatch, Mounted]);
 
   return (
     <div className="ul-container">
