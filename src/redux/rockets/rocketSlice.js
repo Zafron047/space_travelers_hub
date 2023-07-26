@@ -9,7 +9,7 @@ export const fetchRockets = createAsyncThunk(
     return response.data;
   },
 );
-
+/* eslint-disable max-len */
 const rocketReducer = createSlice({
   name: 'RocketSlice',
   initialState: {
@@ -18,7 +18,16 @@ const rocketReducer = createSlice({
     error: null,
     isDataFetched: false,
   },
-  reducers: {},
+  reducers: {
+    addBooking: (state, action) => {
+      const rocketID = action.payload;
+      state.rocketArr = state.rocketArr.map((rocket) => (rocket.id === rocketID ? { ...rocket, booked: true } : rocket));
+    },
+    leaveBooking: (state, action) => {
+      const rocketID = action.payload;
+      state.rocketArr = state.rocketArr.map((rocket) => (rocket.id === rocketID ? { ...rocket, booked: false } : rocket));
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchRockets.pending, (state) => {
@@ -41,4 +50,5 @@ const rocketReducer = createSlice({
   },
 });
 
+export const { addBooking, leaveBooking } = rocketReducer.actions;
 export default rocketReducer.reducer;
