@@ -8,7 +8,6 @@ const Rockets = () => {
   const rocketArr = useSelector((state) => state.rockets.rocketArr);
   const isLoading = useSelector((state) => state.rockets.isLoading);
   const isDataFetched = useSelector((state) => state.rockets.isDataFetched);
-  // console.log('This is Rockets', rocketArr);
   const dispatch = useDispatch();
 
   useEffect(() => {
