@@ -44,7 +44,6 @@ const missionsSlice = createSlice({
     builder.addCase(fetchMissions.rejected, (state, action) => {
       state.isLoading = false;
       state.error = action.error;
-      
     });
   },
 });

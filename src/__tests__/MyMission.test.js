@@ -1,7 +1,7 @@
 import React from 'react';
 import { render as rtlRender } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import Missions from '../components/Missions';
+import MissionMock from '../__mocks__/MissionMock';
 import store from '../redux/store';
 
 const render = (component) => rtlRender(
@@ -10,9 +10,9 @@ const render = (component) => rtlRender(
   </Provider>,
 );
 
-describe('My Missions', () => {
-  it('Render Mission Components', () => {
-    render(<Missions />);
-    expect(Missions).toMatchSnapshot();
+describe('MissionMock', () => {
+  it('render My Missions Components', () => {
+    render(<MissionMock />);
+    expect(MissionMock).toMatchSnapshot();
   });
 });
