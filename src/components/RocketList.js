@@ -23,7 +23,11 @@ const RocketList = ({ rocket }) => {
         />
       )}
       <div>
-        <h3>{rocket.reserved ? (<span className="badge">Reserved</span>) : ''} {rocket.rocket_name}</h3>
+        <h3>
+          {rocket.reserved ? (<span className="badge">Reserved</span>) : ''}
+          {' '}
+          {rocket.rocket_name}
+        </h3>
         <p>{rocket.description}</p>
         <div>
           {rocket.reserved ? (
