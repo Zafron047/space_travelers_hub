@@ -23,15 +23,15 @@ const RocketList = ({ rocket }) => {
         />
       )}
       <div>
-        <h3>{rocket.reserved ? (<span>Reserved</span>) : ''} {rocket.rocket_name} </h3>
+        <h3>{rocket.reserved ? (<span className="badge">Reserved</span>) : ''} {rocket.rocket_name}</h3>
         <p>{rocket.description}</p>
         <div>
           {rocket.reserved ? (
-            <button onClick={() => handleBooking(rocket.id)} type="button">
+            <button className="cancel-button" onClick={() => handleBooking(rocket.id)} type="button">
               Cancel Reservation
             </button>
           ) : (
-            <button onClick={() => handleLeaving(rocket.id)} type="button">
+            <button className="reserve-button" onClick={() => handleLeaving(rocket.id)} type="button">
               Reserve Rocket
             </button>
           )}
