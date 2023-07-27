@@ -1,0 +1,14 @@
+.profile {
+  color: aliceblue;
+  height: 100vh;
+}
+
+.my-missions-ul {
+  padding-inline-start: 0;
+}
+
+.my-missions-li {
+  border: 1px solid #d90429;
+  padding-left: 1rem;
+  width: 45%;
+}
