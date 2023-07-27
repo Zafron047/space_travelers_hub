@@ -8,7 +8,6 @@ const Rockets = () => {
   const rocketArr = useSelector((state) => state.rockets.rocketArr);
   const isLoading = useSelector((state) => state.rockets.isLoading);
   const isDataFetched = useSelector((state) => state.rockets.isDataFetched);
-  console.log('This is Rockets', rocketArr);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,11 +26,7 @@ const Rockets = () => {
           {rocketArr.map((rocket) => (
             <RocketList
               key={rocket.id}
-              rocket={{
-                flickr_images: rocket.flickr_images,
-                rocket_name: rocket.rocket_name,
-                description: rocket.description,
-              }}
+              rocket={rocket}
             />
           ))}
         </ul>
