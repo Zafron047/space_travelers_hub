@@ -14,15 +14,18 @@ const missionsSlice = createSlice({
     isLoading: false,
     error: null,
     isMissionsFetched: false,
+    joinedMissions: [],
   },
   reducers: {
     joinMission: (state, action) => {
       const missionId = action.payload;
       state.missions = state.missions.map((mission) => (mission.mission_id === missionId ? { ...mission, reserved: true } : mission));
+      state.joinedMissions.push(missionId);
     },
     leaveMission: (state, action) => {
       const missionId = action.payload;
       state.missions = state.missions.map((mission) => (mission.mission_id === missionId ? { ...mission, reserved: false } : mission));
+      state.joinedMissions = state.joinedMissions.filter((id) => id !== missionId);
     },
   },
   extraReducers: (builder) => {

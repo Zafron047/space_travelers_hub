@@ -8,7 +8,12 @@ const Nav = () => (
     <nav className="navbar">
       <header className="navbar-header">
         <img src={planetImage} alt="Logo" />
-        <h1 className="nav-heading">Space Travelers Hub</h1>
+        <NavLink
+          to="/"
+        >
+          <h1 className="nav-heading">Space Travelers Hub</h1>
+        </NavLink>
+        {/* <h1 className="nav-heading">Space Travelers Hub</h1> */}
       </header>
       <ul className="nav-ul">
         <li className="nav-li">
