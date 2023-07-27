@@ -27,11 +27,7 @@ const Rockets = () => {
           {rocketArr.map((rocket) => (
             <RocketList
               key={rocket.id}
-              rocket={{
-                flickr_images: rocket.flickr_images,
-                rocket_name: rocket.rocket_name,
-                description: rocket.description,
-              }}
+              rocket={rocket}
             />
           ))}
         </ul>

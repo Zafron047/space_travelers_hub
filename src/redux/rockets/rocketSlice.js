@@ -20,12 +20,14 @@ const rocketReducer = createSlice({
   },
   reducers: {
     addBooking: (state, action) => {
-      const rocketID = action.payload;
-      state.rocketArr = state.rocketArr.map((rocket) => (rocket.id === rocketID ? { ...rocket, booked: true } : rocket));
+      const updatedRocketArr = state.rocketArr.map((object) => (object.id === action.payload ? { ...object, reserved: false } : object));
+
+      return { ...state, rocketArr: updatedRocketArr };
     },
     leaveBooking: (state, action) => {
-      const rocketID = action.payload;
-      state.rocketArr = state.rocketArr.map((rocket) => (rocket.id === rocketID ? { ...rocket, booked: false } : rocket));
+      const updatedRocketArr = state.rocketArr.map((object) => (object.id === action.payload ? { ...object, reserved: true } : object));
+
+      return { ...state, rocketArr: updatedRocketArr };
     },
   },
   extraReducers: (builder) => {

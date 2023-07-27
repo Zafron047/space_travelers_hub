@@ -6,12 +6,12 @@ import { addBooking, leaveBooking } from '../redux/rockets/rocketSlice';
 const RocketList = ({ rocket }) => {
   const dispatch = useDispatch();
 
-  const handleBooking = () => {
-    dispatch(addBooking());
+  const handleBooking = (param) => {
+    dispatch(addBooking(param));
   };
 
-  const handleLeaving = () => {
-    dispatch(leaveBooking());
+  const handleLeaving = (param) => {
+    dispatch(leaveBooking(param));
   };
   return (
     <li className="list" key={rocket.id}>
@@ -26,16 +26,16 @@ const RocketList = ({ rocket }) => {
         <h3>{rocket.rocket_name}</h3>
         <p>{rocket.description}</p>
         <div>
-          {if (rocket.booked){
-            <button onClick={handleBooking} type="button">
+          {rocket.reserved ? (
+            <button onClick={() => handleBooking(rocket.id)} type="button">
+              Cancel Reservation
+            </button>
+          ) : (
+            <button onClick={() => handleLeaving(rocket.id)} type="button">
               Reserve Rocket
             </button>
-          }else {
-            <button onClick={handleLeaving} type="button">
-              Reserve Rocket
-            </button>
-          }}
-        </div>  
+          )}
+        </div>
       </div>
     </li>
   );
@@ -47,6 +47,7 @@ RocketList.propTypes = {
     flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
     rocket_name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
   }).isRequired,
 };
 
