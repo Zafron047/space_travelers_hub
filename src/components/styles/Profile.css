@@ -1,14 +1,14 @@
 .profile-container {
   display: flex;
-  justify-content: space-between;
-  padding: 0 8rem;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  gap: 3rem;
 }
 
 .column {
   color: aliceblue;
   height: 100%;
   width: 400px;
-  text-align: center;
 }
 
 .column-head {
@@ -30,9 +30,8 @@
 
 .profile-list {
   border: 2px solid #d90429;
-  font-size: x-large;
+  font-size: large;
   width: auto;
   text-align: start;
   padding-left: 40px;
-  border-radius: 50px;
 }
