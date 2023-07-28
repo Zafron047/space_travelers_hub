@@ -13,7 +13,7 @@ a {
 .navbar-header {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.58vw;
 }
 
 .nav-heading {
@@ -31,13 +31,13 @@ a {
 
 .nav-li a {
   color: #449dff;
-  font-size: 1.3rem;
+  font-size: 1.4vw;
   text-decoration: none;
 }
 
 .nav-li:nth-child(2) {
-  border-right: 2px solid #000;
-  padding-right: 1rem;
+  border-right: 2px solid #fff;
+  padding-right: 1.8rem;
 }
 
 .nav-li a:active,

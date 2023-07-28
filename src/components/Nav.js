@@ -6,14 +6,14 @@ import planetImage from '../assets/planet_M.png';
 const Nav = () => (
   <>
     <nav className="navbar">
-      <header className="navbar-header">
-        <img src={planetImage} alt="Logo" />
-        <NavLink
-          to="/"
-        >
+      <NavLink
+        to="/"
+      >
+        <header className="navbar-header">
+          <img src={planetImage} alt="Logo" />
           <h1 className="nav-heading">Space Travelers Hub</h1>
-        </NavLink>
-      </header>
+        </header>
+      </NavLink>
       <ul className="nav-ul">
         <li className="nav-li">
           <NavLink

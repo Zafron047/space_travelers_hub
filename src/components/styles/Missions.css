@@ -1,13 +1,14 @@
 .missions-table {
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid #d90429;
   color: aliceblue;
+  margin-top: 25px;
 }
 
 .missions-table th,
 .missions-table td {
-  border: 1px solid #ddd;
+  border: 1px solid #d90429;
   padding: 1rem;
 }
 
@@ -27,16 +28,18 @@
   font-size: 0.8rem;
   width: 8rem;
   border-radius: 0.3rem;
-  padding-bottom: 0.1rem;
+  padding: 6px 4px;
 }
 
 .active-member {
-  background-color: #0096c7;
   display: block;
-  font-size: 0.8rem;
-  width: 8rem;
-  border-radius: 0.3rem;
-  padding-bottom: 0.1rem;
+  background-color: #ff9800;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  width: 6rem;
 }
 
 .not-member {
@@ -50,11 +53,18 @@
 }
 
 .join {
+  background-color: #4caf50;
+  color: #fff;
   width: 8rem;
   cursor: pointer;
   border-radius: 0.3rem;
-  border: 1px solid #4b5156;
   padding: 0.5rem;
+}
+
+.join:hover {
+  background-color: #57d660;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .join:active {
@@ -66,8 +76,8 @@
   width: 8rem;
   cursor: pointer;
   border-radius: 0.3rem;
-  border: 2px solid #d90429;
-  color: #d90429;
+  background-color: #d90429;
+  color: #fff;
   padding: 0.5rem;
 }
 

@@ -1,14 +1,37 @@
-.profile {
+.profile-container {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  gap: 3rem;
+}
+
+.column {
   color: aliceblue;
-  height: 100vh;
+  height: 100%;
+  width: 400px;
 }
 
-.my-missions-ul {
+.column-head {
+  font-size: xx-large;
+  margin-bottom: 2rem;
+}
+
+.empty-message {
+  font-size: x-large;
+  margin: 0;
+}
+
+.u-list {
+  display: flex;
+  flex-direction: column;
   padding-inline-start: 0;
+  gap: 20px;
 }
 
-.my-missions-li {
-  border: 1px solid #d90429;
-  padding-left: 1rem;
-  width: 45%;
+.profile-list {
+  border: 2px solid #d90429;
+  font-size: large;
+  width: auto;
+  text-align: start;
+  padding-left: 40px;
 }
