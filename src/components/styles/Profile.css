@@ -1,14 +1,40 @@
-.profile {
+.profile-container {
+  display: flex;
+  /* gap: 50px; */
+  justify-content: space-between;
+  padding: 0 8rem;
+}
+
+.column {
   color: aliceblue;
   height: 100vh;
+  width: 400px;
+  text-align: center;
 }
 
-.my-missions-ul {
+.column-head {
+  font-size: xx-large;
+  margin-bottom: 2rem;
+}
+
+.empty-message {
+  font-size: x-large;
+  margin: 0;
+}
+
+.u-list {
+  display: flex;
+  flex-direction: column;
   padding-inline-start: 0;
+  gap: 20px;
 }
 
-.my-missions-li {
-  border: 1px solid #d90429;
-  padding-left: 1rem;
-  width: 45%;
+.profile-list {
+  border: 2px solid #d90429;
+  /* padding-left: 2rem; */
+  font-size: x-large;
+  width: auto;
+  text-align: start;
+  padding-left: 40px;
+  border-radius: 50px;
 }
