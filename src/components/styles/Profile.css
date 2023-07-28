@@ -1,0 +1,37 @@
+.profile-container {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  gap: 3rem;
+}
+
+.column {
+  color: aliceblue;
+  height: 100%;
+  width: 400px;
+}
+
+.column-head {
+  font-size: xx-large;
+  margin-bottom: 2rem;
+}
+
+.empty-message {
+  font-size: x-large;
+  margin: 0;
+}
+
+.u-list {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
+  gap: 20px;
+}
+
+.profile-list {
+  border: 2px solid #d90429;
+  font-size: large;
+  width: auto;
+  text-align: start;
+  padding-left: 40px;
+}
