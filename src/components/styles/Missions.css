@@ -28,24 +28,18 @@
   font-size: 0.8rem;
   width: 8rem;
   border-radius: 0.3rem;
-  /* padding-bottom: 0.1rem; */
   padding: 6px 4px;
 }
 
 .active-member {
-  /* background-color: #0096c7;
   display: block;
-  font-size: 0.8rem;
-  width: 8rem;
-  border-radius: 0.3rem;
-  padding-bottom: 0.1rem; */
   background-color: #ff9800;
   color: #fff;
   padding: 8px 20px;
   border-radius: 4px;
   font-weight: bold;
   font-size: 12px;
-  /* margin-right: 8px; */
+  width: 6rem;
 }
 
 .not-member {
@@ -64,7 +58,6 @@
   width: 8rem;
   cursor: pointer;
   border-radius: 0.3rem;
-  /* border: 1px solid #4b5156; */
   padding: 0.5rem;
 }
 
@@ -83,7 +76,6 @@
   width: 8rem;
   cursor: pointer;
   border-radius: 0.3rem;
-  /* border: 2px solid #d90429; */
   background-color: #d90429;
   color: #fff;
   padding: 0.5rem;
