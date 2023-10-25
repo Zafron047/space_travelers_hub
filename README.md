@@ -127,7 +127,7 @@ You can deploy this project using:
 👤 MD. Nohain Islam
 - GitHub: [&nbsp; &nbsp; @githubhandle](https://github.com/Zafron047)
 - Twitter: [&nbsp; &nbsp; @twitterhandle](https://https://twitter.com/NohainZ)
-- LinkedIn: [&nbsp; LinkedIn](https://www.linkedin.com/in/nohain-islam-0261b4148/)
+- LinkedIn: [&nbsp; LinkedIn](https://www.linkedin.com/in/nohain-islam/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 👤 **Zuheb Ahmed**
