@@ -35,3 +35,26 @@
   text-align: start;
   padding-left: 40px;
 }
+
+@media only screen and (max-width: 768px) {
+  .column {
+    width: 5rem;
+  }
+
+  .column-head {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .empty-message {
+    font-size: 1rem;
+  }
+
+  .profile-list {
+    border: 2px solid #d90429;
+    font-size: 0.7rem;
+    width: auto;
+    text-align: center;
+    padding-left: 0px;
+  }
+}
