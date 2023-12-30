@@ -85,3 +85,66 @@
   background-color: #d90429;
   color: #fff;
 }
+
+@media only screen and (max-width: 768px) {
+  .missions-table-header {
+    font-size: 0.6rem;
+  }
+
+  .missions-table th,
+  .missions-table td {
+    padding: 0.3rem;
+  }
+
+  .mission-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .mission-desc {
+    font-size: 0.6rem;
+  }
+
+  .member {
+    background-color: #6c757e;
+    display: block;
+    font-size: 0.6rem;
+    width: 3rem;
+    border-radius: 0.3rem;
+    padding: 6px 4px;
+  }
+
+  .active-member {
+    background-color: #ff9800;
+    display: block;
+    color: #fff;
+    font-size: 0.6rem;
+    width: 3rem;
+    border-radius: 0.3rem;
+    padding: 6px 4px;
+  }
+  
+  .not-member {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .join {
+    background-color: #4caf50;
+    color: #fff;
+    width: 4rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+  }
+
+  .leave {
+    width: 4rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    background-color: #d90429;
+    color: #fff;
+    padding: 0.5rem;
+  }
+}
