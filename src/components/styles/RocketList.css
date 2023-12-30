@@ -62,3 +62,26 @@ button.reserve-button:hover {
   background-color: #57d660;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+@media only screen and (max-width: 768px) {
+  .list {
+    align-items: center;
+  }
+
+  .list-img {
+    width: 50%;
+    height: 16rem;
+  }
+
+  .list p {
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+}
